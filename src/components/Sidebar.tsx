@@ -4,8 +4,15 @@ import { GoLocation } from 'react-icons/go'
 import { GiTie } from 'react-icons/gi'
 import React from 'react'
 import Image from 'next/image'
+import { useTheme } from 'next-themes'
 
 export const Sidebar: React.FC = () => {
+  const { theme, setTheme } = useTheme()
+
+  const changeTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light')
+  }
+
   return (
     <aside>
       <Image
@@ -22,11 +29,13 @@ export const Sidebar: React.FC = () => {
         </span>{' '}
         Vettori
       </h3>
-      <p className="px-2 py-1 my-3 bg-gray-200 rounded-full">Web Developer</p>
+      <p className="px-2 py-1 my-3 bg-gray-200 dark:bg-dark-200 rounded-full">
+        Web Developer
+      </p>
       <a
         href=""
         download="name"
-        className="flex items-center justify-center px-2 py-1 my-3 bg-gray-200 rounded-full"
+        className="flex items-center justify-center px-2 py-1 my-3 bg-gray-200 dark:bg-dark-200 rounded-full"
       >
         <GiTie className="w-6 h-6" /> Download Resume
       </a>
@@ -40,7 +49,7 @@ export const Sidebar: React.FC = () => {
         </a>
       </div>
       {/* address */}
-      <div className="py-4 my-5 bg-gray-200 mx-[-16px]">
+      <div className="py-4 my-5 bg-gray-200 dark:bg-dark-200 mx-[-16px]">
         <div className="flex items-center justify-center space-x-2">
           <GoLocation />
           <span>São Paulo, Brasil</span>
@@ -55,7 +64,10 @@ export const Sidebar: React.FC = () => {
       >
         Email Me
       </button>
-      <button className="w-8/12 px-5 py-2 my-2 text-black rounded-full bg-gradient-to-r from-green-400 to-blue-400">
+      <button
+        className="w-8/12 px-5 py-2 my-2 text-black rounded-full bg-gradient-to-r from-green-400 to-blue-400"
+        onClick={changeTheme}
+      >
         Toggle Theme
       </button>
     </aside>

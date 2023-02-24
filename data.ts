@@ -1,34 +1,71 @@
-import { IService } from 'type'
+import { IService, ISkill } from 'type'
 import { RiComputerLine } from 'react-icons/ri'
 import { FaServer } from 'react-icons/fa'
 import { AiOutlineApi } from 'react-icons/ai'
 import { GiConsoleController } from 'react-icons/gi'
+import { DiJavascript1 } from 'react-icons/di'
+import { GrReactjs } from 'react-icons/gr'
+import { TbBrandReactNative, TbBrandNextjs } from 'react-icons/tb'
+import { FiFigma } from 'react-icons/fi'
+import { SiAdobephotoshop } from 'react-icons/si'
 
 export const services: IService[] = [
   {
-    icon: RiComputerLine,
+    Icon: RiComputerLine,
     title: 'Frontend Development',
     about:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'I can build a beautiful and scalabe SPA using <b>HTML</b>, <b>CSS</b> and <b>NextJS</b>',
   },
   {
-    icon: FaServer,
+    Icon: FaServer,
     title: 'Backend Development',
-    about:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    about: 'Handle database, server, API using <b>Express</b>',
   },
   {
-    icon: AiOutlineApi,
+    Icon: AiOutlineApi,
     title: 'API Development',
-    about:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    about: 'I cant develop robust REST API using <b>Node API</b>',
   },
   {
-    icon: GiConsoleController,
+    Icon: GiConsoleController,
     title: 'Hobbies',
     about:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'I like to play video games, watch series and movies, play the guitar, listen to music and sing',
   },
 ]
 
-export default services
+export const languages: ISkill[] = [
+  {
+    name: 'JavaScript',
+    level: '50%',
+    Icon: DiJavascript1,
+  },
+  {
+    name: 'ReactJS',
+    level: '50%',
+    Icon: GrReactjs,
+  },
+  {
+    name: 'ReactNativet',
+    level: '40%',
+    Icon: TbBrandReactNative,
+  },
+  {
+    name: 'NextJS',
+    level: '60%',
+    Icon: TbBrandNextjs,
+  },
+]
+
+export const tools: ISkill[] = [
+  {
+    name: 'Figma',
+    level: '30%',
+    Icon: FiFigma,
+  },
+  {
+    name: 'Photoshop',
+    level: '30%',
+    Icon: SiAdobephotoshop,
+  },
+]
