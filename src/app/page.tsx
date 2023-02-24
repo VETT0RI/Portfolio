@@ -1,13 +1,24 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import { Sidebar } from '@/components/Sidebar'
+import services from '../../data'
+import { GetServerSidePropsContext } from 'next'
 
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+const Home = ({services}) => {
+  console.log('CLIENT', services)
   return (
     <div>
-      <h1>Ola</h1>
+      <h1 className="p-4">Ola</h1>
     </div>
   )
+}
+
+export default Home
+
+export const getServerSideProps = async () => {
+  const res = await fetch('http://localhost:3000/api/services')
+  const data = await res.json()
+  console.log('SERVER', services)
+  return {
+    props: {
+      services: data.services,
+    },
+  }
 }
