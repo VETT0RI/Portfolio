@@ -16,11 +16,12 @@ export const Sidebar: React.FC = () => {
   return (
     <aside>
       <Image
-        className="mx-auto rounded-full"
+        className="mx-auto border-4 border-green-400 rounded-full"
         src="https://avatars.githubusercontent.com/u/87362531?v=4"
         width={128}
         height={128}
         alt="Foto de Julio Vettori"
+        quality={100}
       />
       <h3 className="my-4 text-3xl font-medium tracking-wider">
         {' '}
@@ -33,18 +34,22 @@ export const Sidebar: React.FC = () => {
         Web Developer
       </p>
       <a
-        href=""
-        download="name"
+        href="/assets/Julio Vettori Resume.pdf"
+        download="Julio Vettori Resume.pdf"
         className="flex items-center justify-center px-2 py-1 my-3 bg-gray-200 dark:bg-dark-200 rounded-full"
       >
         <GiTie className="w-6 h-6" /> Download Resume
       </a>
       {/* //social icon */}
       <div className="flex justify-center w-9/12 gap-4 mx-auto my-5 md:w-full">
-        <a href="">
+        <a href="https://github.com/VETT0RI" target="_blank" rel="noreferrer">
           <AiFillGithub className="w-8 h-8 " />
         </a>
-        <a href="">
+        <a
+          href="https://www.linkedin.com/in/julio-vettori-491709238/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <AiFillLinkedin className="w-8 h-8 text-sky-500" />
         </a>
       </div>

@@ -1,4 +1,4 @@
-import { IService, ISkill } from 'type'
+import { IProject, IService, ISkill } from 'type'
 import { RiComputerLine } from 'react-icons/ri'
 import { FaServer } from 'react-icons/fa'
 import { AiOutlineApi } from 'react-icons/ai'
@@ -37,22 +37,22 @@ export const services: IService[] = [
 export const languages: ISkill[] = [
   {
     name: 'JavaScript',
-    level: '50%',
+    level: 40,
     Icon: DiJavascript1,
   },
   {
     name: 'ReactJS',
-    level: '50%',
+    level: 40,
     Icon: GrReactjs,
   },
   {
-    name: 'ReactNativet',
-    level: '40%',
+    name: 'ReactNative',
+    level: 30,
     Icon: TbBrandReactNative,
   },
   {
     name: 'NextJS',
-    level: '60%',
+    level: 50,
     Icon: TbBrandNextjs,
   },
 ]
@@ -60,12 +60,88 @@ export const languages: ISkill[] = [
 export const tools: ISkill[] = [
   {
     name: 'Figma',
-    level: '30%',
+    level: 20,
     Icon: FiFigma,
   },
   {
     name: 'Photoshop',
-    level: '30%',
+    level: 20,
     Icon: SiAdobephotoshop,
+  },
+]
+
+export const projects: IProject[] = [
+  {
+    id: 1,
+    name: 'Hollow Knigth SilkSong',
+    description: 'Description of the project',
+    imagePath:
+      'https://cdn.cloudflare.steamstatic.com/steam/apps/1030300/capsule_616x353.jpg?t=1673569692',
+    deployedUrl: '',
+    category: ['NextJS'],
+    githubUrl: '',
+    techs: ['NextJS', 'TailwindCSS'],
+  },
+  {
+    id: 2,
+    name: 'CJ Bugado',
+    description: 'Description of the project',
+    imagePath: 'https://i.ytimg.com/vi/lFWwISPurcc/maxresdefault.jpg',
+    deployedUrl: '',
+    category: ['React', 'Node', 'Express'],
+    githubUrl: '',
+    techs: ['React', 'TailwindCSS', 'Node', 'Express REST API'],
+  },
+  {
+    id: 3,
+    name: 'Red Dead 2',
+    description: 'Description of the project',
+    imagePath:
+      'https://pyxis.nymag.com/v1/imgs/3a8/276/54608c0aa57dbba1a57ca55657e54bf70a-12-rockstar-games-lede.jpg',
+    deployedUrl: '',
+    category: ['ReactNative'],
+    githubUrl: '',
+    techs: ['ReactNative', 'Node', 'Express'],
+  },
+  {
+    id: 4,
+    name: 'Harry Potter',
+    description: 'Description of the project',
+    imagePath:
+      'https://cdn1.epicgames.com/offer/e97659b501af4e3981d5430dad170911/EGS_HogwartsLegacy_AvalancheSoftware_S1_2560x1440-2baf3188eb3c1aa248bcc1af6a927b7e',
+    deployedUrl: '',
+    category: ['ReactNative'],
+    githubUrl: '',
+    techs: ['ReactNative'],
+  },
+  {
+    id: 5,
+    name: 'Liga das Lendas 2',
+    description: 'Description of the project',
+    imagePath: 'https://i.ytimg.com/vi/k7WW3SSHb9s/maxresdefault.jpg',
+    deployedUrl: '',
+    category: ['NextJS'],
+    githubUrl: '',
+    techs: ['NextJS', 'TailwindCSS', 'Express REST API'],
+  },
+  {
+    id: 6,
+    name: 'LoL Always beta',
+    description: 'Description of the project',
+    imagePath: 'https://i.ytimg.com/vi/XGbNtDFttVk/maxresdefault.jpg',
+    deployedUrl: '',
+    category: ['React', 'Node'],
+    githubUrl: '',
+    techs: ['React', 'TailwindCSS', 'Node'],
+  },
+  {
+    id: 7,
+    name: 'LoL Always beta2',
+    description: 'Description of the project',
+    imagePath: 'https://i.ytimg.com/vi/XGbNtDFttVk/maxresdefault.jpg',
+    deployedUrl: '',
+    category: ['React', 'Node'],
+    githubUrl: '',
+    techs: ['React', 'TailwindCSS', 'Node'],
   },
 ]

@@ -9,33 +9,33 @@ export const Navbar: React.FC = () => {
   const pathname = usePathname()
 
   useEffect(() => {
-    if (pathname === '/') setActiveitem('Sobre')
-    if (pathname === '/projects') setActiveitem('Projetos')
-    if (pathname === '/resume') setActiveitem('Resumo')
+    if (pathname === '/') setActiveitem('About')
+    if (pathname === '/projects') setActiveitem('Projects')
+    if (pathname === '/resume') setActiveitem('Resume')
   }, [pathname])
 
   return (
     <nav className="flex justify-between px-5 py-3 my-3">
-      <span className="text-xl font-bold text-green-400 border-b-4 border-green-400 md:text-2xl">
+      <span className="text-xl font-bold text-white-400 border-b-4 border-green-400 md:text-2xl">
         {activeItem}
       </span>
       <div className="flex space-x-5 text-lg">
         <NavItem
           activeItem={activeItem}
           setActiveItem={setActiveitem}
-          name="Sobre"
+          name="About"
           route="/"
         />
         <NavItem
           activeItem={activeItem}
           setActiveItem={setActiveitem}
-          name="Projetos"
+          name="Projects"
           route="/projects"
         />
         <NavItem
           activeItem={activeItem}
           setActiveItem={setActiveitem}
-          name="Resumo"
+          name="Resume"
           route="/resume"
         />
       </div>

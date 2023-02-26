@@ -10,7 +10,7 @@ export const NavItem: React.FC<{
   return activeItem !== name ? (
     <Link href={route}>
       <span
-        onClick={() => setActiveItem('Sobre')}
+        onClick={() => setActiveItem('About')}
         className="hover:text-green-400"
       >
         {name}
